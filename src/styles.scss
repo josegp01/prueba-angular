@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --success-main: #2e7d22; /* Verde principal para éxito */
+  --success-contrast: #ffffff; /* Color de contraste (blanco) */
+  --success-light: #60ad5e; /* Verde claro */
+  --success-dark: #005005; /* Verde oscuro */
+  
+  --error-main: #d32f2f; /* Rojo principal para error */
+  --error-contrast: #ffffff; /* Color de contraste (blanco) */
+  --error-light: #ff6659; /* Rojo claro */
+  --error-dark: #9a0007; /* Rojo oscuro */
+}

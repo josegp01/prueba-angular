@@ -1,0 +1,65 @@
+.toast {
+  transition: opacity 0.3s ease-out, top 0.3s ease-out, transform 0.3s cubic-bezier(0.4, 0, 1, 1); /* cubic-bezier for entry */
+  z-index: 1050; /* Ensure it is above other elements */
+  position: fixed;
+  right: 24px; /* Ensure the toasts are aligned to the right */
+  transform: translateX(100%); /* Start off-screen to the right */
+  opacity: 0.5; /* Start with lower opacity */
+  box-shadow: 0px 0px 16px 5px rgba(0, 0, 0, 0.08);
+}
+
+.toast.show {
+  transform: translateX(0); /* Move into view */
+  opacity: 1; /* Fade to full opacity */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1), opacity 0.3s ease-out; /* cubic-bezier for entry */
+}
+
+.toast.fade-out {
+  opacity: 0;
+  transform: translateX(100%); /* Move to the right */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease-in; /* cubic-bezier for exit */
+}
+
+#progress-bar {
+  transition: width 0.1s linear;
+}
+
+.success{
+  background-color: var(--success-main);
+  .header{
+    p{
+      color: var(--p-success-contrast) !important;
+    }
+    button{
+      color: var(--p-success-contrast) !important;
+    }
+  }
+  .content-text{
+    p{
+      color: var(--p-success-contrast) !important;
+    }
+  }
+  #progress-bar{
+    background-color: var(--p-success-contrast);
+  }
+}
+
+.error {
+  background-color: var(--error-main);
+
+  .header {
+    p, button {
+      color: var(--error-contrast) !important;
+    }
+  }
+
+  .content-text {
+    p {
+      color: var(--error-contrast) !important;
+    }
+  }
+
+  #progress-bar {
+    background-color: var(--error-contrast);
+  }
+}
